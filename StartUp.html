@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>SportConnect - Conectando Atletas e Empresas</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color:aliceblue ;
+        background-image: url("_img/background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+      header {
+        background-color: #1e1e2f;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      .search-bar input {
+        padding: 8px;
+        border-radius: 5px;
+        border: none;
+        width: 200px;
+      }
+      main {
+        padding: 20px;
+        text-align: center;
+      }
+      .intro {
+        margin-bottom: 20px;
+      }
+      .btn-group {
+        margin: 20px 0;
+      }
+      .btn {
+        padding: 12px 20px;
+        margin: 10px;
+        background-color: #1e1e2f;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #343454;
+      }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .card {
+        background: white;
+        border-radius: 12px;
+        padding: 10px;
+        width: 200px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      }
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      .card h3 {
+        margin: 10px 0 5px;
+      }
+      .card p {
+        margin: 0;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: -1;"></div>
+    <header style="padding: 10px 20px;">
+      <img src="_img/logo_branca_transparente.png" alt="Logo SportConnect" style="width:80px"/>
+      <div class="logo" style="align-self:auto;">
+        SportConnect
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Pesquisar atletas..."/>
+      </div>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h1>A ponte entre o esforço e o sucesso!</h1>
+        <p>Somos uma ponte entre talentos esportivos e patrocinadores. Crie seu perfil ou encontre atletas com potencial!</p>
+      </section>
+
+      <div class="btn-group">
+        <button class="btn" onclick="login('atleta')">Sou Atleta</button>
+        <button class="btn" onclick="login('empresa')">Sou Empresa</button>
+      </div>
+
+      <h2>🏅 Destaques da Semana</h2>
+      <section class="cards" style="color:#1e1e2f">
+        <div class="card">
+          <img src="https://via.placeholder.com/200x120" alt="Vídeo do atleta">
+          <h3>Lucas Silva</h3>
+          <p>Futebol</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x120" alt="Vídeo do atleta">
+          <h3>Carla Santos</h3>
+          <p>Vôlei</p>
+        </div>
+        <div class="card">
+          <img src="https://via.placeholder.com/200x120" alt="Vídeo do atleta">
+          <h3>João Pedro</h3>
+          <p>Jiu-Jitsu</p>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function login(tipo) {
+        alert("Redirecionando para o login de " + tipo);
+        // Aqui futuramente você pode usar: window.location.href = 'login.html';
+      }
+    </script>
+  </body>
+</html>
